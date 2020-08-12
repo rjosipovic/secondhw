@@ -2,6 +2,48 @@ package home.playground.collection;
 
 public abstract class IndexedCollection implements Collection {
 
+    public static Collection EMPTY_COLLECTION = new Collection() {
+        @Override
+        public boolean isEmpty() {
+            return Boolean.TRUE;
+        }
+
+        @Override
+        public int size() {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public void add(Object object) {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public boolean contains(Object object) {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public boolean remove(Object object) {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public void addAll(Collection collection) {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public void clear() {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public Object[] toArray() {
+            throw new UnsupportedOperationException();
+        }
+    };
+
     protected int size;
 
     public abstract int indexOf(Object object);

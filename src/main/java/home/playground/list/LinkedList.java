@@ -12,7 +12,7 @@ public class LinkedList extends IndexedCollection {
     private Node last;
 
     public LinkedList() {
-        this(Collection.EMPTY_COLLECTION);
+        this(EMPTY_COLLECTION);
     }
 
     public LinkedList(Collection collection) {

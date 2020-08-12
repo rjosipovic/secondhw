@@ -7,51 +7,6 @@ package home.playground.collection;
 public interface Collection {
 
     /**
-     * EMPTY_COLLECTION has only one property and that is to answer to isEmpty() method to <b>true</b>
-     */
-    public static Collection EMPTY_COLLECTION = new Collection() {
-        @Override
-        public boolean isEmpty() {
-            return Boolean.TRUE;
-        }
-
-        @Override
-        public int size() {
-            throw new UnsupportedOperationException();
-        }
-
-        @Override
-        public void add(Object object) {
-            throw new UnsupportedOperationException();
-        }
-
-        @Override
-        public boolean contains(Object object) {
-            throw new UnsupportedOperationException();
-        }
-
-        @Override
-        public boolean remove(Object object) {
-            throw new UnsupportedOperationException();
-        }
-
-        @Override
-        public void addAll(Collection collection) {
-            throw new UnsupportedOperationException();
-        }
-
-        @Override
-        public void clear() {
-            throw new UnsupportedOperationException();
-        }
-
-        @Override
-        public Object[] toArray() {
-            throw new UnsupportedOperationException();
-        }
-    };
-
-    /**
      * Returns <b>true</b> in case Collection contains no objects, <b>false</b> otherwise
      * @return <b>true</b> if empty, <b>false</b> otherwise
      */

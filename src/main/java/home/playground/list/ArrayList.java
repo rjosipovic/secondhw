@@ -12,13 +12,14 @@ public class ArrayList extends IndexedCollection {
     private static final int CAPACITY_EXTEND_FACTOR = 2;
 
     private Object[] objects;
+    private int expandions;
 
     public ArrayList() {
         this(INITIAL_ARRAY_CAPACITY);
     }
 
     public ArrayList(int capacity) {
-        this(Collection.EMPTY_COLLECTION, capacity);
+        this(EMPTY_COLLECTION, capacity);
     }
 
     public ArrayList(Collection collection) {
@@ -47,6 +48,7 @@ public class ArrayList extends IndexedCollection {
             }
             addAll(collection);
         }
+        this.expandions = 0;
     }
 
     /**
@@ -64,6 +66,11 @@ public class ArrayList extends IndexedCollection {
         Object[] expandedArray = new Object[this.objects.length * CAPACITY_EXTEND_FACTOR];
         copyArray(this.objects, expandedArray);
         this.objects = expandedArray;
+        expandions++;
+    }
+
+    public int getExpandions() {
+        return this.expandions;
     }
 
     /**
@@ -209,6 +216,7 @@ public class ArrayList extends IndexedCollection {
     public void clear() {
         objects = new Object[INITIAL_ARRAY_CAPACITY];
         this.size = 0;
+        this.expandions = 0;
     }
 
     /**
